@@ -70,15 +70,24 @@ app.use(mount('/static',async(ctx,next)=>{
 */
 app.use(mount('/static',async(ctx,next)=>{
 	ctx.set('Content-Encoding','gzip');
+	ctx.set('Cache-Control','max-age=5600');
 	await next();
 }))
 app.use(mount('/static',
 	staticCache(
 		'static',
 		{
-			maxAge:5600,
 			buffer:true
 		})
+))
+app.use(mount('/img',async(ctx,next)=>{
+	await next();
+}));
+app.use(mount('/img',
+	staticCache(
+		'public-img',
+		{}
+	)
 ))
 angularProxy(app,'dist',__dirname);
 app.listen(3001);
