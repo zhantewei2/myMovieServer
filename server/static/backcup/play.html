@@ -1,0 +1,51 @@
+<html>
+<head></head>
+<body style='margin:0px'>
+	
+	<div>
+			<div id='xg_box' style='overflow: hidden;'> </div>
+				<script language="javascript">
+				var parse=function(path){
+					if(!path)return;
+					var obj={},key='',str='',v;
+					for(var i =1,len=path.length;i<len;i++){
+						v=path[i];
+						if(v=='='){
+							key=str;
+							str='';
+						}else if(v=='&'||i==len-1){
+							obj[key]=i==len-1?str+v:str;
+							str='';
+							key='';
+						}else{
+							str+=v;
+						}
+					}
+					return obj;
+				}
+				var obj=parse(location.search),
+					box=document.getElementById('xg_box');
+				console.log(decodeURIComponent(obj.d));
+				var XgPlayer = {
+				'Url': decodeURIComponent(obj.d),  //本集播放地址，需更改
+				'NextcacheUrl': "",  //缓冲下一集，需更改
+				'LastWebPage': '',
+				'NextWebPage': "http://www.xx.com/xxx.html",  //下一集播放页面地址，需更改
+				'Buffer': 'http://js.client51.com/installpage.html',  // 播缓冲AD，需更改
+				'Pase': 'http://js.client51.com/xg_loading.html',  // 暂停AD，需更改
+				'Width': obj.w,   // 播放器显示宽度
+				'Height': obj.h,  // 播放器显示高度
+				'Second': 2,  // 缓冲时间
+				"Installpage":'http://js.client51.com/installpage.html'
+				};
+    		</script>
+    		<script src="./xiguaplayer.js" charset="utf-8"></script>
+    		<script>
+    			
+    		</script>
+            
+	</div>
+
+</body>
+<script></script>
+</html>

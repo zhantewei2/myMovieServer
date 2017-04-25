@@ -1,0 +1,386 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"com",
+				"ComponentRef"
+			],
+			[
+				"component",
+				"componentFactoryResolver"
+			],
+			[
+				"Com",
+				"ComponentResolver"
+			],
+			[
+				"tem",
+				"templateRef"
+			],
+			[
+				"Crisis",
+				"CrisisCenterRoutingModule"
+			],
+			[
+				"Route",
+				"RouteActivate"
+			],
+			[
+				"CrisisDet",
+				"CrisisDetailResolve"
+			],
+			[
+				"Cris",
+				"CrisisService"
+			],
+			[
+				"get",
+				"getCrisisClass"
+			],
+			[
+				"Man",
+				"ManageHeroesComponent"
+			],
+			[
+				"crisis",
+				"crisisService"
+			],
+			[
+				"CrisisC",
+				"CrisisCenterHomeComponent"
+			],
+			[
+				"Cri",
+				"CrisisCenterListComponent"
+			],
+			[
+				"AFTE",
+				"AfterContentParentComponent"
+			],
+			[
+				"aFTER",
+				"AfterContentComponent"
+			],
+			[
+				"extra",
+				"extract"
+			],
+			[
+				"extract",
+				"extractCss"
+			],
+			[
+				"ex",
+				"extractCss"
+			],
+			[
+				"my",
+				"my-hero-detail"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Add Channel"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/ztw/新加卷1/webLinux/my2/server"
+	],
+	"file_history":
+	[
+		"/home/ionic2/MyIonic2Project/package.json",
+		"/home/ionic2/MyIonic2Project/src/app/app.html",
+		"/home/ionic2/MyIonic2Project/src/index.html",
+		"/home/ionic2/MyIonic2Project/src/app/app.component.ts",
+		"/home/ionic2/MyIonic2Project/src/app/app.module.ts",
+		"/home/ionic2/MyIonic2Project/www/service-worker.js",
+		"/home/ionic2/MyIonic2Project/src/pages/list/list.html",
+		"/home/ionic2/MyIonic2Project/src/pages/list/list.ts",
+		"/home/ionic2/MyIonic2Project/src/pages/item-details/item-details.html",
+		"/home/ionic2/MyIonic2Project/src/pages/item-details/item-details.ts",
+		"/home/ionic2/MyIonic2Project/src/pages/my-test/test.component.ts",
+		"/home/ionic2/MyIonic2Project/src/pages/hello-ionic/hello-ionic.ts",
+		"/home/ionic2/MyIonic2Project/src/pages/hello-ionic/hello-ionic.html",
+		"/home/ionic2/MyIonic2Project/src/pages/hello-ionic/hello-ionic.scss",
+		"/home/test/app2/index.html",
+		"/home/test/app2/app.module.ts",
+		"/home/test/package.json",
+		"/home/test/app2/crisis-center/crisis-center-routing.module.ts",
+		"/home/test/app2/crisis-center/sorted-heroes.component.ts",
+		"/home/test/app2/crisis-center/test.service.ts",
+		"/home/test/app2/crisis-center/heroes-base-component.ts",
+		"/home/test/app2/crisis-center/crisis-center-home.component.ts",
+		"/home/test/app2/app-routing.module.ts",
+		"/home/test/webpack.config.js",
+		"/home/test/tsconfig.json",
+		"/home/test/app2/main.ts",
+		"/home/test/app2/app.main.ts",
+		"/home/test/test.js",
+		"/home/test/app2/crisis-center/unless.directive.ts",
+		"/home/test/app2/crisis-center/test2.service.ts",
+		"/home/test/app2/crisis-center/test.component.ts",
+		"/home/test/app2/crisis-center/crisis-detail.component.ts",
+		"/home/test/app2/selective-preload-strategy.ts",
+		"/home/ztw/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/test/app2/crisis-center/crisis-center.component.ts",
+		"/home/test/app2/can-deactivate-guard.service.ts",
+		"/home/test/app2/app.component.ts",
+		"/home/test/app2/heroes/hero-detail.component.ts",
+		"/home/test/app2/crisis-center/crisis-center-list.component.ts",
+		"/home/test/app2/admin/admin.component.ts",
+		"/home/test/app2/crisis-center/crisis-detail-resolve.service.ts",
+		"/home/test/app2/heroes/heroes-routing.module.ts",
+		"/home/test/app2/auth-guard.service.ts",
+		"/home/test/test.html",
+		"/home/test/app2/heroes/hero-list.component.ts",
+		"/home/test/app2/crisis-center/crisis.service.ts",
+		"/home/test/app2/admin/admin.module.ts",
+		"/home/test/app2/admin/admin-routing.module.ts",
+		"/home/test/app2/auth.service.ts",
+		"/home/test/app2/test.module.ts",
+		"/home/test/app2/login.component.ts",
+		"/home/test2/package.json",
+		"/home/test/config/webpack.dev.js",
+		"/home/test/config/webpack.common.js",
+		"/home/test2/webpack.config.js",
+		"/home/test2/tsconfig.json",
+		"/home/test/src/app/app.routing.ts",
+		"/home/test/src/polyfills.ts",
+		"/home/test/webpack.config.js.backup",
+		"/home/test2/src/app/app.routing.ts",
+		"/home/test2/config/webpack.dev.js",
+		"/home/test2/config/webpack.common.js",
+		"/home/test2/src/main.ts",
+		"/home/test2/src/app/app.module.ts",
+		"/home/test2/config/webpack.prod.js",
+		"/home/test2/src/app/app.component.ts",
+		"/home/test2/src/vendor.ts",
+		"/home/test2/config/helpers.js",
+		"/home/test/app2/test.component.ts",
+		"/home/angular2/app/app.component.ts",
+		"/home/angular2/app/load-one.module.ts",
+		"/home/angular2/app/app.module.ts",
+		"/home/angular2/app/app.routing.ts",
+		"/home/angular2/app/hero-detail.component.ts",
+		"/home/test/express.js",
+		"/home/test/app2/admin/admin-dashboard.component.ts",
+		"/home/test/app2/admin/manage-crises.component.ts",
+		"/home/test/app2/login-routing.module.ts",
+		"/home/test/app2/heroes/heroes.module.ts",
+		"/home/test/app2/admin/manage-heroes.component.ts",
+		"/home/test/auth-guard.service.ts",
+		"/home/test/app2/admin/admin.manage.crises.ts",
+		"/home/test/app2/crisis-center/cirsis.service.ts",
+		"/home/test/app2/hero-list.component.ts",
+		"/home/test/app2/heroes/hero.service.ts",
+		"/home/test/app2/exponential-strength.pipe.ts",
+		"/home/test/app2/crisis-list.component.ts",
+		"/home/test/app2/app.routes.ts",
+		"/home/test/app2/hightlight.directive.ts",
+		"/home/test/app2/after.content.parent.component.ts",
+		"/home/test/app2/after.content.component.ts",
+		"/home/test/app/main.ts",
+		"/home/test/app/app.module.ts",
+		"/home/test/app/vendor.ts",
+		"/home/test/app2/injection.component.ts",
+		"/home/test/app2/spy.directive.ts",
+		"/home/test/index.html",
+		"/home/test/app2/app.component(animal).ts",
+		"/home/test/app2/hero.service.ts",
+		"/home/test/app2/in-memory-data.service.ts",
+		"/home/test/package/testJson.json",
+		"/home/test/app/getHeroes.service.ts",
+		"/home/test/app/app.component.ts",
+		"/home/test/app/app-routing.module.ts",
+		"/home/test/app/dashboard.component.ts",
+		"/home/test/app/hero-detail.component.ts",
+		"/home/ztw/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/test/app/app.heroes.ts",
+		"/home/test/app/dashboard.html",
+		"/home/test/dist/dashboard.html",
+		"/home/test/dist/index.html",
+		"/home/test/dist/test.html",
+		"/home/test/app/app.heros.ts",
+		"/home/test/app/vendor.js",
+		"/home/test/bootstrap.min.css",
+		"/home/test/app/package/bootstrap.min.js",
+		"/home/test/app/package/bootstrap.min.css",
+		"/home/test/dist/bundle.js",
+		"/home/test/app/test1.js",
+		"/home/test/app/index.js",
+		"/home/test/app/test2.ts",
+		"/home/test/dist/p2.js",
+		"/home/test/app/test2.js",
+		"/home/test/dist/main.css",
+		"/home/test/app/two.css",
+		"/home/angular2/index.html",
+		"/home/angular2/systemjs.config.js",
+		"/home/angular2/app/main.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console",
+			"console.log",
+			"],\n",
+			"canFly",
+			"dist"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mongodb.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
