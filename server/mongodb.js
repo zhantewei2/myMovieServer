@@ -1,7 +1,7 @@
 
 // Instance of mongoose:
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/media' /*,{user:'loveWorld',pass:'loveEveryone'} */);
+mongoose.connect('mongodb://localhost:3002/media' /*,{user:'loveWorld',pass:'loveEveryone'} */);
 
 var Schema=mongoose.Schema;
 var replySchema=new Schema({
