@@ -14,7 +14,6 @@ module.exports=function(mongoose){
 	})
 	*/
 	router.post('/v',async(ctx)=>{
-		console.log('verfiy');
 		let vf=verify.genVerify();
 		ctx.session.vf2=vf.toLowerCase();
 		ctx.body={vf:verify.encrypt(vf,key)};

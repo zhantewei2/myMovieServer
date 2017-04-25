@@ -124,7 +124,6 @@ myMethod={
 				data._id=v.total;
 				data.id=v[category];
 				new movieModel(data).save(err=>{
-					console.log(err)
 					if(!err){ resolve(true);return;}
 					let opt2={total:-1};
 					opt2[category]=-1;
