@@ -4,6 +4,7 @@ const Router=require('koa-router'),
 	verify=new Verify(),
 	key='da82';
 module.exports=function(mongoose){
+	/*
 	router.use(async(ctx,next)=>{
 		if(ctx.header.origin!='http://localhost:4200'){
 			ctx.status=404;
@@ -11,7 +12,9 @@ module.exports=function(mongoose){
 			await next();	
 		}
 	})
+	*/
 	router.post('/v',async(ctx)=>{
+		console.log('verfiy');
 		let vf=verify.genVerify();
 		ctx.session.vf2=vf.toLowerCase();
 		ctx.body={vf:verify.encrypt(vf,key)};
