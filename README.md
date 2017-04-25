@@ -1,1 +1,1 @@
-no msn
+none msn
