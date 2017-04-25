@@ -20,12 +20,13 @@ var rootRouter=require('./router/root.js')(Router,mongoose);
 var inputRouter=require('./input/input.js')(mongoose);
 var adminRouter=require('./router/admin.js')(Router,mongoose);
 app.use(async(ctx,next)=>{
-	
+	/*
 	ctx.response.set('Access-Control-Allow-Origin','http://localhost:4200');
 	ctx.response.set('Access-Control-Allow-Methods','POST,DELETE,PUT');
 	ctx.response.set('Access-Control-Allow-Headers','Content-Type');
 	ctx.response.set('Access-Control-Allow-Credentials','true');
 	//ctx.cookies.set('XSRF-TOKEN','myKey',{httpOnly:false});
+	*/
 	if(ctx.method=='OPTIONS')return ctx.body='1';
 	await next();
 })
@@ -90,6 +91,6 @@ app.use(mount('/img',
 	)
 ))
 angularProxy(app,'dist',__dirname);
-app.listen(3001);
+app.listen(80);
 
 }
