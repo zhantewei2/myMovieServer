@@ -1,7 +1,8 @@
 
 // Instance of mongoose:
+const dbPath=require('./hid.js').dbPath;
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/media' /*,{user:'loveWorld',pass:'loveEveryone'} */);
+mongoose.connect(dbPath);
 
 var Schema=mongoose.Schema;
 var replySchema=new Schema({
@@ -155,7 +156,7 @@ const hidMsn=require('./hid.js');
 
 const init=()=>{
 	return mainModel.findOne({}).then(doc=>{
-		return doc||mainModel.create(hidMsn.initMsn);
+		return doc||mainModel.create(hidMsn.initMsn).then(()=>listModel.create({}));
 	});
 }
 exports.init=init;
