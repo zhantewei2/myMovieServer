@@ -1,7 +1,7 @@
 
 // Instance of mongoose:
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:3002/media' /*,{user:'loveWorld',pass:'loveEveryone'} */);
+mongoose.connect('mongodb://localhost:27017/media' /*,{user:'loveWorld',pass:'loveEveryone'} */);
 
 var Schema=mongoose.Schema;
 var replySchema=new Schema({
@@ -40,7 +40,8 @@ var movieSchema=new Schema({
 	img:String,
 	__v:Number,
 	nv:{type:Number,default:0} //notesVersion;
-})
+},{autoIndex:!PROD_ENV});
+movieSchema.index({category:1,id:1})
 var mainSchema=new Schema({
 	user:String,
 	pwd:String,
@@ -78,7 +79,7 @@ var	replyModel=mongoose.model('replys',replySchema);
 var listModel=require('./model/list-model.js')(mongoose);
 
 
-myMethod={
+let myMethod={
 	saveReply:(movie_id,notesId,data)=>{
 		return new Promise(resolve=>{
 			let opt={'notes.$.r':{$each:[data],$slice:-2}};
@@ -131,7 +132,7 @@ myMethod={
 						resolve(false);
 					})
 				})
-			})
+			}).catch(e=>console.log(e))
 		})
 	},
 	removeMovie:(_id,id,category)=>{
@@ -150,7 +151,14 @@ myMethod={
 		})
 	}
 }
+const hidMsn=require('./hid.js');
 
+const init=()=>{
+	return mainModel.findOne({}).then(doc=>{
+		return doc||mainModel.create(hidMsn.initMsn);
+	});
+}
+exports.init=init;
 exports.mainColle=mainModel;
 exports.movieColle=movieModel;
 exports.replyColle=replyModel;

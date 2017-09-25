@@ -22,10 +22,7 @@ module.exports=function(Router,mongoose){
 		opt[obj.cg+'.'+obj.b]=obj.d;
 		ctx.body=await mongoose.listColle.update(
 			{},
-			{$set:opt}).then(v=>{
-				return v?1:0;
-			})
-		
+			{$set:opt})
 	})
 	
 	router.post('/updateHot',async(ctx)=>{

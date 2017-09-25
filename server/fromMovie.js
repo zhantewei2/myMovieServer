@@ -2,6 +2,7 @@
 	Array.prototype.AsyncForEach=function(fn,endFn){
     	this.length?fn(this[0],()=>{this.slice(1).AsyncForEach(fn,endFn)}):endFn();
 	}
+PROD_ENV=false;
 var req=require('request');
 var fs=require('fs');
 var iconv=require('iconv-lite');
@@ -24,14 +25,28 @@ resetMovieObj();
 let visit=(url)=>{
 	url=urlUt.resolve(hostPath, url);
 	return new Promise(resolve=>{
-		req({method:'get',
-			url:url,
-			encoding:null,
-			timeout:reqTimeout
-		},(err,r,body)=>{
-			if(err)resolve(false);
-			resolve(iconv.decode(body,'gb2312'));
-		})
+		let tryCount=5;
+		const getPage=()=>{
+			req({method:'get',
+				url:url,
+				encoding:null,
+				timeout:reqTimeout
+			},(err,r,body)=>{
+				if(err)resolve(false);
+				if(!body){
+					console.log('try visit again!!!');
+					if(--tryCount){
+						getPage()
+					}else{
+						console.log('access multi error ,give up access!!')
+						resolve(false);
+					}
+				}else{
+					resolve(iconv.decode(body,'gb2312'));		
+				}
+			})
+		}
+		getPage();
 	})
 }
 let select=(content,query,callback)=>{
@@ -99,6 +114,10 @@ let getOnePage=function(getPath,callback){
 		if(!elems)return false;
 		elems.AsyncForEach(
 			(v,next)=>{
+				if(!v.attribs){
+					console.log('format error!!');
+					return next();
+				}
 				getMsn(v.attribs.href,cssQuery[1]).then(elems=>{
 					if(!elems)return next();
 					setMovie(elems[0],getTextNodes(elems[1]),elems[3]);
@@ -108,7 +127,7 @@ let getOnePage=function(getPath,callback){
 						if(!elems)return next();
 						dealJs(elems[0].attribs.src,next);
 					})			
-				});
+				}).catch(e=>{console.log('format error,continue catch!!');next()})
 			},
 			()=>{
 				let arr=reverseArr(movieArr);
@@ -133,8 +152,8 @@ let getOneAll=function(baseName,maxSize,category){
 	}
 }
 //begin:
-category='wars';
-getOneAll('/war',3);
+category='romances';
+getOneAll('/romance',40);
 
 function getTextNodes(obj,pure=false){
 	let arr=[],data;
@@ -155,21 +174,23 @@ function getTextNodes(obj,pure=false){
 }
 
 function setMovie(imgElem,textNodes,itdElem){
-	movieObj.img=imgElem.attribs.src;
-	movieObj.itd=getTextNodes(itdElem,true).join('');
-	movieObj.name=textNodes[0];
-	console.log(++getPagecount+' success get the name of: '+movieObj.name);
-	for(let i =0,len=textNodes.length;i<len;i++){
-		if(/主演/.test(textNodes[i])){
-			movieObj.actors=textNodes[i+1];
-		}else if(/地区/.test(textNodes[i])){
-			movieObj.region=textNodes[i+1];
-		}else if(/语言/.test(textNodes[i])){
-			movieObj.lag=textNodes[i+1];
-		}else if(/年份/.test(textNodes[i])){
-			movieObj.year=textNodes[i+1];
+	try{
+		movieObj.img=imgElem.attribs.src;
+		movieObj.itd=getTextNodes(itdElem,true).join('');
+		movieObj.name=textNodes[0];
+		console.log(++getPagecount+' success get the name of: '+movieObj.name);
+		for(let i =0,len=textNodes.length;i<len;i++){
+			if(/主演/.test(textNodes[i])){
+				movieObj.actors=textNodes[i+1];
+			}else if(/地区/.test(textNodes[i])){
+				movieObj.region=textNodes[i+1];
+			}else if(/语言/.test(textNodes[i])){
+				movieObj.lag=textNodes[i+1];
+			}else if(/年份/.test(textNodes[i])){
+				movieObj.year=textNodes[i+1];
+			}
 		}
-	}
+	}catch(e){}
 }
 function resetMovieObj(){
 	movieObj={

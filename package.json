@@ -4,13 +4,14 @@
   "description": "none",
   "main": "index.js",
   "scripts": {
-    "gzip": "node ./config/gzip.js",
-    "gzip-prod": "npm run gzip folder=dest"
+    "prod":"node server/prod-server.js prod"
   },
   "author": "ztw",
   "license": "ISC",
   "dependencies": {
     "babel-preset-stage-3": "^6.22.0",
+    "css-select": "^1.3.0-rc0",
+    "htmlparser2": "^3.9.2",
     "koa": "^2.2.0",
     "koa-bodyparser": "^2.3.0",
     "koa-convert": "^1.2.0",

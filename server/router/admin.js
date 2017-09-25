@@ -1,4 +1,4 @@
-const	pswd='ztwJeastormCeJing';
+const pswd=require('../hid.js').pswd;
 module.exports=function(Router,mongoose){
 	const router=new Router(),
 		router2=new Router();
